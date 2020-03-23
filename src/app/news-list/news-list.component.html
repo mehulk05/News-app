@@ -1,0 +1,23 @@
+<ng-container *ngIf="news">
+
+
+
+    <div class="card flex-row flex-wrap mb-4" *ngFor="let item of news">
+        <div class="card-header border-0 col-md-2 col-xs-12 col-sm-3 mt-2">
+            <img src='{{item.urlToImage}}' height="100" width="100" alt="">
+        </div>
+        <div class="card-block px-2 col-md-10  col-sm-9 col-xs-12 my-3">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a routerLink="" (click)="getDetailNews(item.title)" class="btn btn-outline-info">
+                <span class="glyphicon glyphicon-tags"></span>Read Full Story</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="card-footer w-100  text-right">
+            <span class="text-muted"> {{item.source.name}}</span>
+            <span>&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;</span>{{item.publishedAt}}
+        </div>
+    </div>
+    <br>
+
+</ng-container>

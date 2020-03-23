@@ -1,0 +1,25 @@
+<ng-container *ngIf="new_detail">
+
+
+
+    <div class="card flex-row flex-wrap my-4">
+        <div class="card-header border-0 col-md-2 mt-2">
+            <img src='{{new_detail.urlToImage}}' height="100" alt="">
+        </div>
+        <div class="card-block px-2 col-md-10  my-3">
+            <h5 class="card-title">{{new_detail.title}}</h5>
+            <p class="card-text">{{new_detail.description}}</p>
+            <p class="card-text">{{new_detail.description}}</p>
+            <p class="card-text">{{new_detail.content}}</p>
+            <a href='{{new_detail.url}}' class="btn btn-outline-success">
+                <span class="glyphicon glyphicon-tags"></span>Read Full Story on original Source</a>
+        </div>
+        <div class="w-100"></div>
+        <div class="card-footer w-100  text-right">
+            <span class="text-muted"> {{new_detail.source.name}}</span>
+            <span>&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;</span> <span>&nbsp;&nbsp;</span>{{new_detail.publishedAt}}
+        </div>
+    </div>
+    <br>
+
+</ng-container>
